@@ -1,19 +1,18 @@
-package module;
+package com.company.module;
 
 public class Subtask extends Task {
-    private Epic epic;
+    private int epicID;
 
     public Subtask(String name, String description, Status status) {
         super(name, description, status);
     }
 
-    public void setEpic(Epic epic) {
-        this.epic = epic;
+    public void setEpicID(int epicID) {
+        this.epicID = epicID;
     }
 
-    public void changeStatus(Status status) {   // обновляем статус подзадачи
-        this.status = status;
-        this.epic.update();
+    public int getEpicID() {
+        return epicID;
     }
 
     public Status getStatus() {
@@ -43,5 +42,21 @@ public class Subtask extends Task {
                 ", description='" + description + '\'' +
                 ", id=" + id +
                 ", status=" + status;
+    }
+    public void setStatus(Status status){
+        this.status = status;
+
+    }
+    public boolean equals(Subtask subtask){
+        if(!subtask.getName().equals(this.getName())){
+            return false;
+        }
+        if (!subtask.getDescription().equals(this.getDescription())){
+            return false;
+        }
+        if (subtask.getEpicID() != this.getEpicID()){
+            return false;
+        }
+        return true;
     }
 }

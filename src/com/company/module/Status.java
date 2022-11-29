@@ -1,4 +1,4 @@
-package module;
+package com.company.module;
 
 public enum Status {
     NEW,

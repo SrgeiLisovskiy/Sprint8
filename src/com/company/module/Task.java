@@ -1,27 +1,22 @@
-package module;
+package com.company.module;
 
 public class Task {
     String name;
     String description;
     int id;
     Status status;
-    static int counter = 1;
+
 
     public Task(String name, String description, Status status) {
         this.name = name;
         this.description = description;
         this.status = status;
-        this.id = counter++;
+
     }
 
     public Task(String name, String description) {
         this.name = name;
         this.description = description;
-        this.id = counter++;
-    }
-
-    public void changeStatus(Status status) {
-        this.status = status;
     }
 
 
