@@ -12,20 +12,16 @@ public class Subtask extends Task {
         super(name, description, status);
     }
 
+    public Subtask(String name, String description, int id, Status status) {
+        super(name, description, id, status);
+    }
+
     public void setEpicID(Integer epicID) {
         this.epicID = epicID;
     }
 
     public int getEpicID() {
         return epicID;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String toString() {

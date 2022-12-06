@@ -1,6 +1,5 @@
 package com.company.module;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Epic extends Task {
@@ -10,25 +9,15 @@ public class Epic extends Task {
         super(name, description);
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
-
+    public Epic(String name, String description, int id) {
+        super(name, description, id);
     }
 
     public List<Integer> getSubtasks() {  // список подзадач
         return this.subtasksID;
     }
-
     public void setSubtasksID(List<Integer> subtasksID) {
         this.subtasksID = subtasksID;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     @Override

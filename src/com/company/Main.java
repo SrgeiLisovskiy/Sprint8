@@ -28,10 +28,10 @@ public class Main {
         System.out.println(manager.getSubtasks());
         System.out.println(manager.getEpics());
         System.out.println(manager.getTasks());
-    Task task3 = new Task("Задача 1", "Помыть посуду", Status.DONE);
+    Task task3 = new Task("Задача 1", "Помыть посуду",1, Status.DONE);
         manager.updateTask(task3);
         System.out.println(manager.getTasks());
-        Subtask subtask4 = new Subtask("Подзадача 1", "Сделать физику", Status.DONE);
+        Subtask subtask4 = new Subtask("Подзадача 1", "Сделать физику",4, Status.DONE);
         manager.updateSubtask(subtask4);
       System.out.println(manager.getSubtasks());
         System.out.println(manager.getEpics());
