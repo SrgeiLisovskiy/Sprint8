@@ -4,13 +4,17 @@ import com.company.module.Epic;
 import com.company.module.Status;
 import com.company.module.Subtask;
 import com.company.module.Task;
-import com.company.serves.Manager;
+import com.company.serves.InMemoryTaskManager;
+import com.company.serves.Managers;
+import com.company.serves.TaskManager;
 
 
 public class Main {
 
     public static void main(String[] args) {
-        Manager manager = new Manager();
+
+        TaskManager manager =  Managers.getDefault();
+
         Task task1 = new Task("Задача 1", "Помыть посуду", Status.NEW);
         Task task2 = new Task("Задача 2", "Сделать ТЗ", Status.NEW);
         manager.addTask(task1);
@@ -38,10 +42,17 @@ public class Main {
       manager.clearSubtask();
         System.out.println(manager.getEpics());
         System.out.println(manager.getSubtasks());
-       manager.removeTaskID(2);
-       System.out.println(manager.getTasks());
-        manager.removeEpicID(6);
-        System.out.println(manager.getEpics());
-        System.out.println(manager.getSubtasks());
+        manager.getEpicID(3);
+        manager.getTaskID(1);
+        manager.getTaskID(2);
+        manager.getEpicID(6);
+        manager.getEpicID(3);
+        manager.getTaskID(1);
+        manager.getTaskID(2);
+        manager.getEpicID(6);
+        manager.getEpicID(3);
+        manager.getTaskID(1);
+        manager.getTaskID(2);
+        System.out.println(manager.getHistory());
    }
 }
