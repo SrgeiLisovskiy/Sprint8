@@ -18,6 +18,7 @@ public class InMemoryTaskManager implements TaskManager {
     public HashMap<Integer, Epic> collectionEpic = new HashMap<>();
     public HashMap<Integer, Subtask> collectionSubtask = new HashMap<>();
 
+
     private final HistoryManager historyManager = Managers.getDefaultHistory();
 
 
@@ -85,7 +86,7 @@ public class InMemoryTaskManager implements TaskManager {
         collectionSubtask.clear();
         for (int i : collectionEpic.keySet()) {
             Epic epic = collectionEpic.get(i);
-            List<Integer> subtasksID= epic.getSubtasks();
+            List<Integer> subtasksID = epic.getSubtasks();
             subtasksID.clear();
             epic.setSubtasksID(subtasksID);
             updateEpicStatus(epic);
@@ -109,7 +110,7 @@ public class InMemoryTaskManager implements TaskManager {
     @Override
     public Epic getEpicID(int id) {
         if (collectionEpic.get(id) != null) {
-            Epic epic =collectionEpic.get(id);
+            Epic epic = collectionEpic.get(id);
             historyManager.add(epic);
             return epic;
         } else {
@@ -132,6 +133,7 @@ public class InMemoryTaskManager implements TaskManager {
     public void removeTaskID(int id) {                               // удаляем по ID
         if (collectionTask.get(id) != null) {
             collectionTask.remove(id);
+            historyManager.remove(id);
         } else {
             System.out.println("Task c ID " + id + " не найден!");
         }
@@ -143,8 +145,10 @@ public class InMemoryTaskManager implements TaskManager {
             List<Integer> subtasksID = collectionEpic.get(id).getSubtasks();
             for (int i : subtasksID) {
                 collectionSubtask.remove(i);
+                historyManager.remove(i);
             }
             collectionEpic.remove(id);
+            historyManager.remove(id);
         } else {
             System.out.println("Epic c ID " + id + " не найден!");
         }
@@ -159,6 +163,7 @@ public class InMemoryTaskManager implements TaskManager {
             subtasksID.remove((Object) id);
             epic.setSubtasksID(subtasksID);
             collectionSubtask.remove(id);
+            historyManager.remove(id);
             updateEpicStatus(epic);
         } else {
             System.out.println("Subtask c ID " + id + " не найден!");
@@ -178,6 +183,7 @@ public class InMemoryTaskManager implements TaskManager {
     public void updateTask(Task task) {
         if (collectionTask.get(task.getId()) != null) {
             collectionTask.put(task.getId(), task);
+
         } else {
             System.out.println("Task не найдена!");
         }
@@ -198,10 +204,10 @@ public class InMemoryTaskManager implements TaskManager {
     @Override
     public void updateSubtask(Subtask subtask) {    // обновляет статус
         Subtask subtasks = collectionSubtask.get(subtask.getId());
-        if ( subtasks!= null) {
-           subtasks.setName(subtask.getName());
-           subtasks.setDescription(subtask.getDescription());
-           subtasks.setStatus(subtask.getStatus());
+        if (subtasks != null) {
+            subtasks.setName(subtask.getName());
+            subtasks.setDescription(subtask.getDescription());
+            subtasks.setStatus(subtask.getStatus());
             updateEpicStatus(collectionEpic.get(subtasks.getEpicID()));
         } else {
             System.out.println("Subtask не найдена!");
@@ -225,7 +231,7 @@ public class InMemoryTaskManager implements TaskManager {
             }
 
         }
-        if (hasNew && !hasInProgress && !hasDone || epic.getSubtasks().size()==0) {
+        if (hasNew && !hasInProgress && !hasDone || epic.getSubtasks().size() == 0) {
             epic.setStatus(Status.NEW);
         } else if (!hasNew && !hasInProgress && hasDone) {
             epic.setStatus(Status.DONE);
@@ -233,9 +239,10 @@ public class InMemoryTaskManager implements TaskManager {
             epic.setStatus(Status.IN_PROGRESS);
         }
     }
+
     @Override
-    public List<Task> getHistory(){
-       return historyManager.getHistory();
+    public List<Task> getHistory() {
+        return historyManager.getHistory();
     }
 }
 

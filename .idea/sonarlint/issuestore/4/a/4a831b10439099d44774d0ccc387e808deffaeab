@@ -1,0 +1,8 @@
+
+S	java:S106'"9Replace this use of System.out or System.err by a logger.(å”‘ëùÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(å”‘ëùÿÿÿÿ
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(å”‘ëùÿÿÿÿ
+Z	java:S1063"9Replace this use of System.out or System.err by a logger.(å”‘ëùÿÿÿÿ8ØÕµ×Ñ0
+Z	java:S1065"9Replace this use of System.out or System.err by a logger.(å”‘ëùÿÿÿÿ8ýß¶×Ñ0
+e
+java:S1128"CRemove this unused import 'com.company.serves.InMemoryTaskManager'.(‚õ°¯úÿÿÿÿ8¨Ê·×Ñ0
