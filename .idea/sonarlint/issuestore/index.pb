@@ -1,18 +1,18 @@
 
 P
  src/com/company/module/Epic.java,5\e\5e73d6f9b848bb11b3b782826acec2f20bc12017
+P
+ src/com/company/module/Task.java,2\9\29b64f0631cb90c221aeb384d4dd6f72f32c26a3
 W
 'src/com/company/serves/TaskManager.java,5\1\515057eef63359fa895f4dfca0ea253659d25f67
 Z
 *src/com/company/serves/HistoryManager.java,b\9\b9b30122132720f2d277632b7c9c3063b3f19663
-T
-$src/com/company/serves/Managers.java,4\c\4cc6358b03b0b28fb0fad70b3e447b9c71c62560
 P
  src/com/company/serves/Node.java,7\0\702d341656533dcde5c79d90093200861b9525cd
 S
 #src/com/company/module/Subtask.java,e\9\e9036b8501227ca66e5b6d0fb32aaa903404fcfc
-P
- src/com/company/module/Task.java,2\9\29b64f0631cb90c221aeb384d4dd6f72f32c26a3
+T
+$src/com/company/serves/Managers.java,4\c\4cc6358b03b0b28fb0fad70b3e447b9c71c62560
 b
 2src/com/company/serves/InMemoryHistoryManager.java,d\9\d95c8141fbabfc2e99a9d28d8ca67b0ff869adb5
 _

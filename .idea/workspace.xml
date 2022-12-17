@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50ec06a5-0637-4cec-b65e-b359185a7a0c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/serves/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/9/29b64f0631cb90c221aeb384d4dd6f72f32c26a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a831b10439099d44774d0ccc387e808deffaeab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4cc6358b03b0b28fb0fad70b3e447b9c71c62560" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/515057eef63359fa895f4dfca0ea253659d25f67" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/702d341656533dcde5c79d90093200861b9525cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/b/9bda5e54c6991ef0c58ea8b80458f717ae44be33" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9b30122132720f2d277632b7c9c3063b3f19663" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d95c8141fbabfc2e99a9d28d8ca67b0ff869adb5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9036b8501227ca66e5b6d0fb32aaa903404fcfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/serves/HistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/serves/HistoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/serves/InMemoryHistoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/serves/InMemoryHistoryManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/serves/InMemoryTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/serves/InMemoryTaskManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,28 +81,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/company/serves/InMemoryTaskManager.java</url>
-          <line>157</line>
-          <properties class="com.company.serves.InMemoryTaskManager" method="removeSubtaskID">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/company/serves/InMemoryTaskManager.java</url>
-          <line>142</line>
-          <properties class="com.company.serves.InMemoryTaskManager" method="removeEpicID">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.company.serves.Node" memberName="next" />
