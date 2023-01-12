@@ -79,8 +79,10 @@ public class FileBackedTasksManager extends InMemoryTaskManager implements TaskM
                         } else if (task instanceof Task) {
                             Task task1 = task;
                             file1.collectionTask.put(task1.getId(), task1);
+                        }           //else {
+//                            historyFromString(allLine.get(allLine.size() - 1));
+//                        }
                         }
-                    }
                 }
 
                 file1.setId(id + 1);
@@ -89,7 +91,7 @@ public class FileBackedTasksManager extends InMemoryTaskManager implements TaskM
             }
         } else {
             throw new ManagerSaveException("Файл не найден");
-        }
+        }                                                       // Не совсем понял должна ли востанавливаться история просмотров...
         ArrayList<Integer> historyTasksID = new ArrayList<>(historyFromString(allLine.get(allLine.size() - 1)));
         for (int tasksID : historyTasksID) {
             if (file1.collectionTask.containsKey(tasksID)) {
