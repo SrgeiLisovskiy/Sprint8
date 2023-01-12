@@ -4,14 +4,15 @@ import com.company.module.Epic;
 import com.company.module.Status;
 import com.company.module.Subtask;
 import com.company.module.Task;
-import com.company.serves.InMemoryTaskManager;
 import com.company.serves.Managers;
 import com.company.serves.TaskManager;
+
+import java.io.IOException;
 
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         TaskManager manager =  Managers.getDefault();
 
@@ -50,6 +51,7 @@ public class Main {
         manager.removeSubtaskID(subtaskID1);
         System.out.println(manager.getHistory());
         manager.removeEpicID(epicID1);
+
         System.out.println(manager.getHistory());
    }
 }

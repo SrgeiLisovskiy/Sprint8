@@ -4,13 +4,12 @@ import com.company.module.Task;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class InMemoryHistoryManager implements HistoryManager {
 
     public HashMap<Integer, Node<Task>> keyHistoryTask = new HashMap<>();
 
-    CustomLinkedList<Task> linkedList = new CustomLinkedList<Task>();
+    CustomLinkedList<Task> linkedList = new CustomLinkedList<>();
 
 
     @Override
@@ -29,12 +28,10 @@ public class InMemoryHistoryManager implements HistoryManager {
     public void add(Task task) {
         int i = task.getId();
         Node<Task> taskNode = linkedList.linkLast(task);
-        if (!keyHistoryTask.containsKey(i)) {
-            keyHistoryTask.put(i, taskNode);
-        } else if (keyHistoryTask.containsKey(i)) {
+        if (keyHistoryTask.containsKey(i)) {
             linkedList.removeNode(keyHistoryTask.get(i));
-            keyHistoryTask.put(i, taskNode);
         }
+        keyHistoryTask.put(i, taskNode);
 
     }
 
@@ -62,33 +59,37 @@ public class InMemoryHistoryManager implements HistoryManager {
         public ArrayList<Task> getTasks() {
             ArrayList<Task> tasksList = new ArrayList<>();
             Node<Task> nodeTask = head;
-            while (nodeTask !=null){
-                    tasksList.add( nodeTask.data);
-                    nodeTask = nodeTask.next;
+            while (nodeTask != null) {
+                tasksList.add(nodeTask.data);
+                nodeTask = nodeTask.next;
             }
             return tasksList;
 
         }
 
         public void removeNode(Node<Task> node) {
-            Node<Task> nodeRight = node.next;
-            Node<Task> nodeLeft = node.prev;
-            if (nodeLeft == null && nodeRight == null) {
-               head = nodeLeft;
-               tail = nodeRight;
-            } else if (nodeRight == null) {
-                Node<Task> newTail = tail.prev;
-                newTail.next = null;
-                tail = newTail;
-            } else if (nodeLeft == null) {
-                Node<Task> newHead = head.next;
-                newHead.prev = null;
-                head = newHead;
+            if (node != null) {
+                Node<Task> nodeRight = node.next;
+                Node<Task> nodeLeft = node.prev;
+                if (nodeLeft == null && nodeRight == null) {
+                    head = nodeLeft;
+                    tail = nodeRight;
+                } else if (nodeRight == null) {
+                    Node<Task> newTail = tail.prev;
+                    newTail.next = null;
+                    tail = newTail;
+                } else if (nodeLeft == null) {
+                    Node<Task> newHead = head.next;
+                    newHead.prev = null;
+                    head = newHead;
+                } else {
+                    nodeLeft.next = nodeRight;
+                    nodeRight.prev = nodeLeft;
+                }
+                size--;
             } else {
-                nodeLeft.next = nodeRight;
-                nodeRight.prev = nodeLeft;
+                System.out.println("Ошибка обнавления истории");
             }
-            size--;
         }
 
     }

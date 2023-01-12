@@ -1,0 +1,9 @@
+id,type,name,status,description,epic
+1,TASK,Задача 1,NEW,Description Description Помыть посуду,
+2,TASK,Задача 2,NEW,Description Description Сделать ТЗ,
+3,EPIC,Задача 3,NEW,Description Description Сделать уроки,
+7,EPIC,Задача 4,NEW,Description Сходить в магазин,
+5,SUBTASK,Подзадача 2,NEW,Description Description Сделать информатику,3
+6,SUBTASK,Подзадача 3,NEW,Description Description Сделать математику,3
+
+2,5,1,3,7

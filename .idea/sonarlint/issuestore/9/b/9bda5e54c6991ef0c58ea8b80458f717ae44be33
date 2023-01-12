@@ -1,24 +1,12 @@
 
 p
 java:S1192Š"TDefine a constant instead of duplicating this literal " Ğ½Ğµ Ğ½Ğ°Ğ¹Ğ´ĞµĞ½!" 3 times.(£ë¸Íøÿÿÿÿ
-†
-java:S1319"kThe type of "collectionTask" should be an interface such as "Map" rather than the implementation "HashMap".(–ò¬Óıÿÿÿÿ
-
-java:S1319"kThe type of "collectionEpic" should be an interface such as "Map" rather than the implementation "HashMap".(¾Ä²¡
-‰
-java:S1319"nThe type of "collectionSubtask" should be an interface such as "Map" rather than the implementation "HashMap".(ñ »ûÿÿÿÿ
 s
 java:S14888"]Immediately return this expression instead of assigning it to the temporary variable "tasks".(µë¼Ş
 v
 java:S1488>"`Immediately return this expression instead of assigning it to the temporary variable "subtasks".(°ß´Ã
 x
 java:S1488D"]Immediately return this expression instead of assigning it to the temporary variable "epics".(‘¡¶áÿÿÿÿÿ
-u
-java:S1104"ZMake collectionTask a static final constant or non-public and provide accessors if needed.(–ò¬Óıÿÿÿÿ
-p
-java:S1104"ZMake collectionEpic a static final constant or non-public and provide accessors if needed.(¾Ä²¡
-x
-java:S1104"]Make collectionSubtask a static final constant or non-public and provide accessors if needed.(ñ »ûÿÿÿÿ
 O
 java:S2864W"4Iterate over the "entrySet" instead of the "keySet".(ÄııĞüÿÿÿÿ
 T	java:S106Š"9Replace this use of System.out or System.err by a logger.(£ë¸Íøÿÿÿÿ

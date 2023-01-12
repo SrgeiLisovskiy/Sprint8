@@ -1,5 +1,7 @@
 package com.company.module;
 
+import com.company.serves.TaskType;
+
 import java.util.Objects;
 
 public class Task {
@@ -8,17 +10,21 @@ public class Task {
     int id;
     Status status;
 
+    TaskType type;
+
 
     public Task(String name, String description, Status status) {
         this.name = name;
         this.description = description;
         this.status = status;
+        type = TaskType.TASK;
 
     }
 
     public Task(String name, String description) {
         this.name = name;
         this.description = description;
+        type = TaskType.TASK;
     }
 
     public Task(String name, String description, int id, Status status) {
@@ -26,17 +32,20 @@ public class Task {
         this.description = description;
         this.id = id;
         this.status = status;
+        type = TaskType.TASK;
     }
 
     public Task(String name, String description, int id) {
         this.name = name;
         this.description = description;
         this.id = id;
+        type = TaskType.TASK;
     }
 
     public void setStatus(Status status) {
         this.status = status;
     }
+
     public Status getStatus() {
         return this.status;
     }
@@ -76,5 +85,12 @@ public class Task {
                 '}';
     }
 
+    public TaskType getType() {
+        return type;
+    }
+
+    public void setType(TaskType type) {
+        this.type = type;
+    }
 }
 

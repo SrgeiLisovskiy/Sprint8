@@ -14,12 +14,12 @@ public class InMemoryTaskManager implements TaskManager {
     private int id = 1;
 
 
-    public HashMap<Integer, Task> collectionTask = new HashMap<>();
-    public HashMap<Integer, Epic> collectionEpic = new HashMap<>();
-    public HashMap<Integer, Subtask> collectionSubtask = new HashMap<>();
+    HashMap<Integer, Task> collectionTask = new HashMap<>();
+    HashMap<Integer, Epic> collectionEpic = new HashMap<>();
+    HashMap<Integer, Subtask> collectionSubtask = new HashMap<>();
 
 
-    private final HistoryManager historyManager = Managers.getDefaultHistory();
+    public final HistoryManager historyManager = Managers.getDefaultHistory();
 
 
     @Override
@@ -243,6 +243,19 @@ public class InMemoryTaskManager implements TaskManager {
     @Override
     public List<Task> getHistory() {
         return historyManager.getHistory();
+    }
+
+    public HistoryManager getHistoryManager() {
+        return historyManager;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
 
