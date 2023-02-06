@@ -1,0 +1,22 @@
+
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(•­ı¹
+Y
+java:S1854&">Remove this useless assignment to local variable "subtaskID3".(¼Ç™ıÿÿÿÿ
+J
+java:S1481&"/Remove this unused "subtaskID3" local variable.(¼Ç™ıÿÿÿÿ
+7
+java:S30105"!Remove this assignment of "file".(ÙÖÁ
+K
+java:S22095"5Change this instance-reference to a static reference.(ÙÖÁ
+h
+java:S37768"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(•õº¸
+?
+java:S5413E")Verify that "remove()" is used correctly.(§úŞê
+Q	java:S125T"<This block of commented-out lines of code should be removed.(Ï×Õ‹
+Q
+java:S1854ı"5Remove this useless assignment to local variable "s".(¬ë¯¹ÿÿÿÿÿ
+d
+java:S1871ú"MThis branch's code block is the same as the block for the branch on line 248.(…ª •
+B
+java:S1481ı"&Remove this unused "s" local variable.(¬ë¯¹ÿÿÿÿÿ
