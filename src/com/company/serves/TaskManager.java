@@ -6,13 +6,14 @@ import com.company.module.Task;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.TreeSet;
 
 public interface TaskManager {
-    int addTask(Task task) throws IOException;
+    int addTask(Task task);
 
-    int addEpic(Epic epic) throws IOException;
+    int addEpic(Epic epic) ;
 
-    int addSubtask(Subtask subtask) throws IOException;
+    int addSubtask(Subtask subtask) ;
 
     List<Task> getTasks();
 
@@ -20,17 +21,18 @@ public interface TaskManager {
 
     List<Epic> getEpics();
 
-    void clearTask() throws IOException;
 
-    void clearEpic() throws IOException;
+    void clearTask() ;
 
-    void clearSubtask() throws IOException;
+    void clearEpic() ;
 
-    Task getTaskID(int id) throws IOException;
+    void clearSubtask() ;
 
-    Epic getEpicID(int id) throws IOException;
+    Task getTaskID(int id);
 
-    Subtask getSubtaskID(int id) throws IOException;
+    Epic getEpicID(int id) ;
+
+    Subtask getSubtaskID(int id) ;
 
     void removeTaskID(int id);
 
@@ -46,4 +48,5 @@ public interface TaskManager {
 
     List<Task> getHistory();
 
+    TreeSet<Task> getSortedTaskSet();
 }

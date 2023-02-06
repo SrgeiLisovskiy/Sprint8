@@ -10,6 +10,8 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,20 +19,20 @@ public class FileBackedTasksManager extends InMemoryTaskManager implements TaskM
 
     static Path path = Path.of("taskData.csv");
     static private File file = new File(String.valueOf(path));
-    private static final String HEAD = "id,type,name,status,description,epic";
+    private static final String HEAD = "id,type,name,status,description,startTime,duration,endTime,epic";
 
     public static void main(String[] args) throws IOException {
         FileBackedTasksManager manager = new FileBackedTasksManager(file);
         FileBackedTasksManager manager1;
-        Task task1 = new Task("Задача 1", "Помыть посуду", Status.NEW);
+        Task task1 = new Task("Задача 1", "Помыть посуду", Status.NEW,Duration.ofMinutes(30),LocalDateTime.now());
         int taskID1 = manager.addTask(task1);
-        Task task2 = new Task("Задача 2", "Сделать ТЗ", Status.NEW);
+        Task task2 = new Task("Задача 2", "Сделать ТЗ", Status.NEW,Duration.ofMinutes(50),LocalDateTime.now());
         int taskID2 = manager.addTask(task2);
-        Epic epic1 = new Epic("Задача 3", "Сделать уроки");
+        Epic epic1 = new Epic("Задача 3", "Сделать уроки",Duration.ofMinutes(45),LocalDateTime.now());
         int epicID1 = manager.addEpic(epic1);
-        Subtask subtask1 = new Subtask(epicID1, "Подзадача 1", "Сделать физику", Status.NEW);
-        Subtask subtask2 = new Subtask(epicID1, "Подзадача 2", "Сделать информатику", Status.NEW);
-        Subtask subtask3 = new Subtask(epicID1, "Подзадача 3", "Сделать математику", Status.NEW);
+        Subtask subtask1 = new Subtask(epicID1, "Подзадача 1", "Сделать физику", Status.NEW, Duration.ofMinutes(25),LocalDateTime.now());
+        Subtask subtask2 = new Subtask(epicID1, "Подзадача 2", "Сделать информатику", Status.NEW, Duration.ofMinutes(35),LocalDateTime.now());
+        Subtask subtask3 = new Subtask(epicID1, "Подзадача 3", "Сделать математику", Status.NEW, Duration.ofMinutes(43),LocalDateTime.now());
         int subtaskID1 = manager.addSubtask(subtask1);
         int subtaskID2 = manager.addSubtask(subtask2);
         int subtaskID3 = manager.addSubtask(subtask3);
@@ -234,11 +236,15 @@ public class FileBackedTasksManager extends InMemoryTaskManager implements TaskM
     }
 
     public String toString(Task task) {
+
         String type = null;
         int id = task.getId();
         String name = task.getName();
         Status status = task.getStatus();
-        String description = task.getDescription();
+        String description =task.getDescription();
+        String duration = String.valueOf(task.getDuration());
+        String startTime = String.valueOf(task.getStartTime());
+        String endTime = String.valueOf(task.getEndTime());
         if (task instanceof Task) {
             type = String.valueOf(task.getType());
         } else if (task instanceof Epic) {
@@ -249,12 +255,14 @@ public class FileBackedTasksManager extends InMemoryTaskManager implements TaskM
             int epicID = ((Subtask) task).getEpicID();
             String.valueOf(task.getType());
             return "\n" + id + "," + type + "," +
-                    name + "," + status + "," + "Description " +
-                    description + "," + epicID;
+                    name + "," + status + ","  +
+                    description + "," + duration+ "," + startTime +
+                    "," + endTime + "," + epicID;
         }
         return "\n" + id + "," + type + "," +
-                name + "," + status + "," + "Description " +
-                description + ",";
+                name + "," + status + "," +
+                description + "," + duration + "," + startTime +
+                "," + endTime ;
     }
 
     public Task fromString(String value) {
@@ -262,24 +270,35 @@ public class FileBackedTasksManager extends InMemoryTaskManager implements TaskM
         int id = Integer.parseInt(splitTask[0]);
         if (splitTask[1].equals("SUBTASK")) {
             Subtask subtask = new Subtask(splitTask[2], splitTask[4], id, Status.valueOf(splitTask[3].toUpperCase()));
-            subtask.setEpicID(Integer.parseInt(splitTask[5]));
+            subtask.setEpicID(Integer.parseInt(splitTask[8]));
             subtask.setType(TaskType.SUBTASK);
+            subtask.setDuration(Duration.parse(splitTask[5]));
+                subtask.setStartTime(LocalDateTime.parse(splitTask[6]));
+                subtask.setEndTime(LocalDateTime.parse(splitTask[7]));
             return subtask;
         } else if (splitTask[1].equals("EPIC")) {
-            Epic epic = new Epic(splitTask[2], splitTask[4], id);
+           Epic epic = new Epic(splitTask[2], splitTask[4], id);
             epic.setStatus(Status.valueOf(splitTask[3].toUpperCase()));
             epic.setType(TaskType.EPIC);
+                epic.setDuration("null".equals(splitTask[5]) ? null : Duration.parse(splitTask[5]));
+                epic.setStartTime("null".equals(splitTask[6]) ? null : LocalDateTime.parse(splitTask[6]));
+                epic.setEndTime("null".equals(splitTask[7]) ? null : LocalDateTime.parse(splitTask[7]));
             return epic;
         } else {
             Task task = new Task(splitTask[2], splitTask[4], id, Status.valueOf(splitTask[3].toUpperCase()));
             task.setType(TaskType.TASK);
+            task.setDuration("null".equals(splitTask[5]) ? null : Duration.parse(splitTask[5]));
+            task.setStartTime("null".equals(splitTask[6]) ? null : LocalDateTime.parse(splitTask[6]));
+            task.setEndTime("null".equals(splitTask[7]) ? null : LocalDateTime.parse(splitTask[7]));
             return task;
+
         }
     }
 
     static List<Integer> historyFromString(String value) {
+
         List<Integer> historyTaskID = new ArrayList<>();
-        if (value != null) {
+        if (!value.isBlank()) {
             String[] taskID = value.split(",");
 
             for (String id : taskID) {

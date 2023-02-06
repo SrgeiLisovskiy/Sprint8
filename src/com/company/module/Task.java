@@ -2,6 +2,8 @@ package com.company.module;
 
 import com.company.serves.TaskType;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Task {
@@ -11,6 +13,9 @@ public class Task {
     Status status;
 
     TaskType type;
+    Duration duration;
+    LocalDateTime startTime;
+    LocalDateTime endTime;
 
 
     public Task(String name, String description, Status status) {
@@ -39,6 +44,35 @@ public class Task {
         this.name = name;
         this.description = description;
         this.id = id;
+        type = TaskType.TASK;
+    }
+
+    public Task(int id, String name, String description, Status status, Duration duration, LocalDateTime startTime) {
+        this.name = name;
+        this.description = description;
+        this.id = id;
+        this.status = status;
+        this.duration = duration;
+        this.startTime = startTime;
+        this.endTime = getEndTime();
+        type = TaskType.TASK;
+    }
+
+    public Task(String name, String description, Status status, Duration duration, LocalDateTime startTime) {
+        this.name = name;
+        this.description = description;
+        this.status = status;
+        this.duration = duration;
+        this.startTime = startTime;
+        this.endTime = getEndTime();
+        type = TaskType.TASK;
+    }
+    public Task(String name, String description, Duration duration, LocalDateTime startTime) {
+        this.name = name;
+        this.description = description;
+        this.duration = duration;
+        this.startTime = startTime;
+        this.endTime = getEndTime();
         type = TaskType.TASK;
     }
 
@@ -81,7 +115,9 @@ public class Task {
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", id=" + id +
-                ", status=" + status +
+                ", status=" + status + ", duration=" + duration +
+                ", startTime="+ startTime + ", endTime=" + endTime
+                +
                 '}';
     }
 
@@ -91,6 +127,32 @@ public class Task {
 
     public void setType(TaskType type) {
         this.type = type;
+    }
+    public LocalDateTime getEndTime() {
+        if (startTime != null && duration != null)
+            return startTime.plusSeconds(duration.toSeconds());
+        else
+            return null;
+    }
+
+    public Duration getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Duration duration) {
+        this.duration = duration;
+    }
+
+    public LocalDateTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalDateTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public void setEndTime(LocalDateTime endTime) {
+        this.endTime = endTime;
     }
 }
 

@@ -8,6 +8,7 @@ import com.company.module.Task;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.TreeSet;
 
 
 public class InMemoryTaskManager implements TaskManager {
@@ -16,7 +17,18 @@ public class InMemoryTaskManager implements TaskManager {
 
     HashMap<Integer, Task> collectionTask = new HashMap<>();
     HashMap<Integer, Epic> collectionEpic = new HashMap<>();
-    HashMap<Integer, Subtask> collectionSubtask = new HashMap<>();
+   public HashMap<Integer, Subtask> collectionSubtask = new HashMap<>();
+    TreeSet<Task> sortedTaskSet = new TreeSet<>((task1, task2) -> {
+        if(task1.getStartTime() != null && task2.getStartTime() != null) {
+            return task1.getStartTime().compareTo(task2.getStartTime());
+        } else if (task1.getStartTime() == null && task2.getStartTime() == null){
+            Integer taskID1 = task1.getId();
+            Integer taskID2 = task2.getId();
+            return taskID1.compareTo((taskID2));
+        } else if (task1.getStartTime() == null){
+            return 1;
+        } else return -1;
+    });
 
 
     public final HistoryManager historyManager = Managers.getDefaultHistory();
@@ -26,6 +38,7 @@ public class InMemoryTaskManager implements TaskManager {
     public int addTask(Task task) {                     // добавляем Task
         task.setId(id++);
         collectionTask.put(task.getId(), task);
+        updateSortedTaskSet();
         return task.getId();
     }
 
@@ -47,6 +60,7 @@ public class InMemoryTaskManager implements TaskManager {
         List<Integer> subtaskID = epics.getSubtasks();
         subtaskID.add(subtask.getId());
         updateEpicStatus(epics);
+        updateSortedTaskSet();
         return subtask.getId();
     }
 
@@ -90,6 +104,8 @@ public class InMemoryTaskManager implements TaskManager {
             subtasksID.clear();
             epic.setSubtasksID(subtasksID);
             updateEpicStatus(epic);
+            updateSortedTaskSet();
+
         }
 
     }
@@ -134,6 +150,8 @@ public class InMemoryTaskManager implements TaskManager {
         if (collectionTask.get(id) != null) {
             collectionTask.remove(id);
             historyManager.remove(id);
+            updateSortedTaskSet();
+
         } else {
             System.out.println("Task c ID " + id + " не найден!");
         }
@@ -165,24 +183,19 @@ public class InMemoryTaskManager implements TaskManager {
             collectionSubtask.remove(id);
             historyManager.remove(id);
             updateEpicStatus(epic);
+            updateSortedTaskSet();
+
         } else {
             System.out.println("Subtask c ID " + id + " не найден!");
         }
     }
 
-    private List<Subtask> getEpicSubtask(int id) {        //получение списка подзадач по ID=>Epic
-        List<Integer> subtasksID = collectionEpic.get(id).getSubtasks();
-        List<Subtask> subtasks = new ArrayList<>();
-        for (int i : subtasksID) {
-            subtasks.add(collectionSubtask.get(i));
-        }
-        return subtasks;
-    }
 
     @Override
     public void updateTask(Task task) {
         if (collectionTask.get(task.getId()) != null) {
             collectionTask.put(task.getId(), task);
+            updateSortedTaskSet();
 
         } else {
             System.out.println("Task не найдена!");
@@ -209,6 +222,8 @@ public class InMemoryTaskManager implements TaskManager {
             subtasks.setDescription(subtask.getDescription());
             subtasks.setStatus(subtask.getStatus());
             updateEpicStatus(collectionEpic.get(subtasks.getEpicID()));
+            updateSortedTaskSet();
+
         } else {
             System.out.println("Subtask не найдена!");
         }
@@ -239,6 +254,9 @@ public class InMemoryTaskManager implements TaskManager {
             epic.setStatus(Status.IN_PROGRESS);
         }
     }
+    public HashMap<Integer, Subtask> getSubtask(){
+        return collectionSubtask;
+    }
 
     @Override
     public List<Task> getHistory() {
@@ -256,6 +274,16 @@ public class InMemoryTaskManager implements TaskManager {
 
     public void setId(int id) {
         this.id = id;
+    }
+    @Override
+    public TreeSet<Task> getSortedTaskSet() {
+        return sortedTaskSet;
+    }
+    public TreeSet<Task> updateSortedTaskSet(){
+        sortedTaskSet.clear();
+       sortedTaskSet.addAll(getTasks());
+       sortedTaskSet.addAll(getSubtasks());
+        return sortedTaskSet ;
     }
 }
 
