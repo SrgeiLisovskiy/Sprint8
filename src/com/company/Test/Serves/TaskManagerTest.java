@@ -4,7 +4,9 @@ import com.company.module.Epic;
 import com.company.module.Status;
 import com.company.module.Subtask;
 import com.company.module.Task;
+import com.company.serves.InMemoryTaskManager;
 import com.company.serves.TaskManager;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -19,10 +21,7 @@ class TaskManagerTest<T extends TaskManager> {
     Epic epic;
     Subtask subtask1;
     Subtask subtask2;
-//    @BeforeEach
-//    void beforeEach(){
-//         manager = new InMemoryTaskManager();
-//    }
+
 
     @Test
     void addTask() {
