@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47fabf5f-f5d2-4f78-88ab-3cccc38fa6ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/company/Module/EpicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/company/Serves/FileBackedTasksManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/2787132d03baa1c6fc881a7e9e323e2e91d49d63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a831b10439099d44774d0ccc387e808deffaeab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/67a117fa043ee793c9c488314ed58341954ee5b5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/a/ea6df3aa17b81481effb28f230b3f7e9dfa52a31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java-sprint6-hw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-sprint6-hw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint6-hw/com/company/Test/Module/EpicTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint6-hw/com/company/Test/Serves/FileBackedTasksManagerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint6-hw/com/company/Test/Serves/InMemoryHistoryManagerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint6-hw/com/company/Test/Serves/InMemoryTaskManagerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint6-hw/com/company/Test/Serves/TaskManagerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test/Module/EpicTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test/Serves/FileBackedTasksManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test/Serves/InMemoryHistoryManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/Serves/InMemoryHistoryManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test/Serves/InMemoryTaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/Serves/InMemoryTaskManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test/Serves/TaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/Serves/TaskManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/taskData.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +47,106 @@
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.language"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.company" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.InMemoryHistoryManagerTest">
+    <configuration name="EpicTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-sprint6-hw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.company.Module.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.company.Module" />
+      <option name="MAIN_CLASS_NAME" value="Test.company.Module.EpicTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileBackedTasksManagerTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-sprint6-hw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.company.Serves.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.company.Serves" />
+      <option name="MAIN_CLASS_NAME" value="Test.company.Serves.FileBackedTasksManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileBackedTasksManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-sprint6-hw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Test.company.Serves.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.Test.company.Serves" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Test.company.Serves.FileBackedTasksManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryHistoryManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-sprint6-hw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.company.Serves.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Test.company.Serves" />
+      <option name="MAIN_CLASS_NAME" value="Test.company.Serves.InMemoryHistoryManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryTaskManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-sprint6-hw" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Test.company.Serves.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.Test.company.Serves" />
+      <option name="MAIN_CLASS_NAME" value="com.company.Test.company.Serves.InMemoryTaskManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.InMemoryHistoryManagerTest" />
+        <item itemvalue="JUnit.FileBackedTasksManagerTest (1)" />
+        <item itemvalue="JUnit.EpicTest (1)" />
+        <item itemvalue="JUnit.FileBackedTasksManagerTest" />
+        <item itemvalue="JUnit.InMemoryTaskManagerTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,5 +168,32 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/Test/Serves/TaskManagerTest.java</url>
+          <line>273</line>
+          <properties class="Test.Serves.TaskManagerTest">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Test/Serves/TaskManagerTest.java</url>
+          <line>252</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

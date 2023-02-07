@@ -3,6 +3,8 @@
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(•­ı¹
 Y
 java:S1854&">Remove this useless assignment to local variable "subtaskID3".(¼Ç™ıÿÿÿÿ
+‰
+java:S1130"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø8ƒ†êâ0
 J
 java:S1481&"/Remove this unused "subtaskID3" local variable.(¼Ç™ıÿÿÿÿ
 7
@@ -13,6 +15,10 @@ h
 java:S37768"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(•õº¸
 ?
 java:S5413E")Verify that "remove()" is used correctly.(§úŞê
+d
+java:S6201K"BReplace this instanceof check and cast with 'instanceof Epic epic'(ÊôÃ ùÿÿÿÿ8¼ƒ†êâ0
+j
+java:S6201N"HReplace this instanceof check and cast with 'instanceof Subtask subtask'(‚ü¹†ıÿÿÿÿ8Àƒ†êâ0
 Q	java:S125T"<This block of commented-out lines of code should be removed.(Ï×Õ‹
 Q
 java:S1854ı"5Remove this useless assignment to local variable "s".(¬ë¯¹ÿÿÿÿÿ
@@ -20,3 +26,7 @@ d
 java:S1871ú"MThis branch's code block is the same as the block for the branch on line 248.(…ª •
 B
 java:S1481ı"&Remove this unused "s" local variable.(¬ë¯¹ÿÿÿÿÿ
+k
+java:S6201ş"HReplace this instanceof check and cast with 'instanceof Subtask subtask'(÷ñŸØÿÿÿÿÿ8èƒ†êâ0
+N
+java:S2201€"+The return value of "valueOf" must be used.(œ”ñ‰úÿÿÿÿ8èƒ†êâ0

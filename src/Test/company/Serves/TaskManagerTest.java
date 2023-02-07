@@ -1,4 +1,4 @@
-package com.company.Test.Serves;
+package Test.company.Serves;
 
 import com.company.module.Epic;
 import com.company.module.Status;
@@ -15,8 +15,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TaskManagerTest<T extends TaskManager> {
-   TaskManager manager;
+abstract class TaskManagerTest<T extends TaskManager> {
+   T manager;
     Task task;
     Epic epic;
     Subtask subtask1;
@@ -275,7 +275,7 @@ class TaskManagerTest<T extends TaskManager> {
         assertNotNull(manager. getSortedTaskSet(), "Список задач не пустой!");
         task = new Task(1,"Задача 1", "Помыть посуду", Status.NEW,Duration.ofMinutes(40),LocalDateTime.now());
         manager.addTask(task);
-        Task task2 = new Task(1, "Задача 2", "Сделать ТЗ", Status.NEW,Duration.ofMinutes(32),LocalDateTime.now());
+        Task task2 = new Task(2, "Задача 2", "Сделать ТЗ", Status.NEW,Duration.ofMinutes(32),LocalDateTime.now());
         manager.addTask(task2);
         assertEquals(2,manager.getSortedTaskSet().size(),"После добавления задач - кол-во задач не соответствует");
         epic = new Epic("Задача 3", "Сделать уроки", Duration.ofMinutes(45), LocalDateTime.now());

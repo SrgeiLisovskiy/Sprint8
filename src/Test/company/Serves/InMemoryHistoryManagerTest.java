@@ -1,4 +1,4 @@
-package com.company.Test.Serves;
+package Test.company.Serves;
 
 import com.company.module.Status;
 import com.company.module.Task;
@@ -51,7 +51,7 @@ class InMemoryHistoryManagerTest {
     @Test
     void remove() {
         // Пустая история задач.
-        assertDoesNotThrow(()->historyManager.remove(1), "Удаление из пустой истории");
+        assertDoesNotThrow(() -> historyManager.remove(1), "Удаление из пустой истории");
         // Со стандартным поведением
         task = new Task("Задача 1", "Помыть посуду", 1, Status.NEW);
         historyManager.add(task);

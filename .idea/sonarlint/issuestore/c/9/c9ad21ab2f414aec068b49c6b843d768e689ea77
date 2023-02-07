@@ -1,0 +1,36 @@
+
+}
+java:S1192�"fDefine a constant instead of duplicating this literal "Сделать информатику" 3 times.(󀏬
+�
+java:S1192%"rDefine a constant instead of duplicating this literal "Неверное количество задач." 3 times.(̺
+i
+java:S1192n"TDefine a constant instead of duplicating this literal "Сделать ТЗ" 3 times.(ޗ�P
+�
+java:S1192$"lDefine a constant instead of duplicating this literal "Задачи на возвращаются." 3 times.(���
+p
+java:S1192"ZDefine a constant instead of duplicating this literal "Помыть посуду" 9 times.(����
+x
+java:S1192"bDefine a constant instead of duplicating this literal "Задача не найдена." 3 times.(λ��
+l
+java:S1192�"UDefine a constant instead of duplicating this literal "Подзадача 2" 3 times.(󀏬
+k
+java:S1192;"UDefine a constant instead of duplicating this literal "Подзадача 1" 8 times.(��ފ
+|
+java:S1192 "fDefine a constant instead of duplicating this literal "Задачи не совпадают." 6 times.(����
+q
+java:S1192+"[Define a constant instead of duplicating this literal "Сделать уроки" 13 times.(���
+e
+java:S1192"ODefine a constant instead of duplicating this literal "Задача 1" 9 times.(����
+r
+java:S1192;"\Define a constant instead of duplicating this literal "Сделать физику" 8 times.(��ފ
+f
+java:S1192+"PDefine a constant instead of duplicating this literal "Задача 3" 14 times.(���
+d
+java:S1192n"ODefine a constant instead of duplicating this literal "Задача 2" 3 times.(ޗ�P
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ޣ��
+^
+java:S1128"CRemove this unused import 'com.company.serves.InMemoryTaskManager'.(���������
+X
+java:S1128	"=Remove this unused import 'org.junit.jupiter.api.BeforeEach'.(ڒ�������
+A
+java:S5960"+Remove this assertion from production code.(λ��
