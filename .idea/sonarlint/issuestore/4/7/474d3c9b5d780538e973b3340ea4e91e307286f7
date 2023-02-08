@@ -1,0 +1,6 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(©ùÌŸþÿÿÿÿ
+c
+java:S1612'"AReplace this lambda with method reference 'manager::getSubtasks'.(íËðíùÿÿÿÿ8›¾™”ã0
+F
+java:S5960"+Remove this assertion from production code.(ì°ñøýÿÿÿÿ

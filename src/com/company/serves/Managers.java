@@ -7,7 +7,7 @@ import java.nio.file.Path;
 public class Managers {
     public static TaskManager getDefault() {
 //        return new InMemoryTaskManager();
-        return FileBackedTasksManager.loadFromFile(new File(String.valueOf(Path.of("taskData.csv"))));
+        return FileBackedTasksManager.loadFromFile(new File("taskData.csv"));
     }
 
     public static HistoryManager getDefaultHistory() {

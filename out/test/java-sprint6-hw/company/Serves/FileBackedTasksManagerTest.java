@@ -1,4 +1,4 @@
-package Test.company.Serves;
+package Test.company.serves;
 
 import com.company.module.Epic;
 import com.company.module.Status;

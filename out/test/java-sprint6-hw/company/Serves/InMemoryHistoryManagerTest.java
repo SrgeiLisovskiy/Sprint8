@@ -1,4 +1,4 @@
-package Test.company.Serves;
+package Test.company.serves;
 
 import com.company.module.Status;
 import com.company.module.Task;
