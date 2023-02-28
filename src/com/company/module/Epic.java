@@ -5,13 +5,10 @@ import com.company.serves.TaskType;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class Epic extends Task {
-    InMemoryTaskManager manager = new InMemoryTaskManager();
-    HashMap<Integer, Subtask> subtasks = manager.getSubtask();
 
 
     private List<Integer> subtasksID;
@@ -43,7 +40,7 @@ public class Epic extends Task {
         type = TaskType.EPIC;
     }
 
-    public List<Integer> getSubtasks() {  // список подзадач
+    public List<Integer> getSubtasksID() {  // список подзадач
         return this.subtasksID;
     }
 
@@ -52,6 +49,8 @@ public class Epic extends Task {
     }
 
     private void updateDates() {
+        InMemoryTaskManager manager = new InMemoryTaskManager();
+        HashMap<Integer, Subtask> subtasks = manager.getSubtask();
         Duration sumDuration = null;
         LocalDateTime newStartTime = null;
         LocalDateTime newEndTime = null;
@@ -86,4 +85,6 @@ public class Epic extends Task {
                 ", startTime="+ startTime + ", endTime=" + endTime
                 +", subtasks=" + subtasksID + "}";
     }
+
+
 }

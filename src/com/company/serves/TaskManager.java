@@ -48,5 +48,8 @@ public interface TaskManager {
 
     List<Task> getHistory();
 
-    TreeSet<Task> getSortedTaskSet();
+
+    TreeSet<Task> getPrioritizedTasks();
+
+    List<Subtask> getEpicSubtask(int id);
 }

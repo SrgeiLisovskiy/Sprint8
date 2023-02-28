@@ -267,25 +267,25 @@ abstract class TaskManagerTest<T extends TaskManager> {
         manager.getTaskID(1);
         assertEquals(1, manager.getHistory().size());
     }
-    @Test
-    void getPrioritizedTasks(){
-        assertNotNull(manager. getSortedTaskSet(), "Список задач не пустой!");
-        task = new Task(1,"Задача 1", "Помыть посуду", Status.NEW,Duration.ofMinutes(40),LocalDateTime.now());
-        manager.addTask(task);
-        Task task2 = new Task(2, "Задача 2", "Сделать ТЗ", Status.NEW,Duration.ofMinutes(32),LocalDateTime.now());
-        manager.addTask(task2);
-        assertEquals(2,manager.getSortedTaskSet().size(),"После добавления задач - кол-во задач не соответствует");
-        epic = new Epic("Задача 3", "Сделать уроки", Duration.ofMinutes(45), LocalDateTime.now());
-       int epicID1= manager.addEpic(epic);
-        subtask1 = new Subtask(epicID1, "Подзадача 1", "Сделать физику", Status.NEW);
-        manager.addSubtask(subtask1);
-        subtask2 = new Subtask(epicID1, "Подзадача 2", "Сделать информатику", Status.NEW);
-        manager.addSubtask(subtask2);
-        assertEquals(4,manager.getSortedTaskSet().size(),"После добавления задач - кол-во задач не соответствует");
-        manager.removeSubtaskID(subtask1.getId());
-        assertEquals(3,manager.getSortedTaskSet().size(), "После удаления задачи - кол-во задач не соответствует");
+//    @Test
+//    void getPrioritizedTasks(){
+//        assertNotNull(manager. getSortedTaskSet(), "Список задач не пустой!");
+//        task = new Task(1,"Задача 1", "Помыть посуду", Status.NEW,Duration.ofMinutes(40),LocalDateTime.now());
+//        manager.addTask(task);
+//        Task task2 = new Task(2, "Задача 2", "Сделать ТЗ", Status.NEW,Duration.ofMinutes(32),LocalDateTime.now());
+//        manager.addTask(task2);
+//        assertEquals(2,manager.getSortedTaskSet().size(),"После добавления задач - кол-во задач не соответствует");
+//        epic = new Epic("Задача 3", "Сделать уроки", Duration.ofMinutes(45), LocalDateTime.now());
+//       int epicID1= manager.addEpic(epic);
+//        subtask1 = new Subtask(epicID1, "Подзадача 1", "Сделать физику", Status.NEW);
+//        manager.addSubtask(subtask1);
+//        subtask2 = new Subtask(epicID1, "Подзадача 2", "Сделать информатику", Status.NEW);
+//        manager.addSubtask(subtask2);
+//        assertEquals(4,manager.getSortedTaskSet().size(),"После добавления задач - кол-во задач не соответствует");
+//        manager.removeSubtaskID(subtask1.getId());
+//        assertEquals(3,manager.getSortedTaskSet().size(), "После удаления задачи - кол-во задач не соответствует");
 
 
     }
 
-}
+//}

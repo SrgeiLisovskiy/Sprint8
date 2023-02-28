@@ -1,34 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="01e71018-181e-4988-bfb6-47260a80026e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/java-sprint7-hw.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="f8f48a60-b046-41fb-8894-b86cf7d8de07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Test/company/serves/HttpTaskManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/adapters/CustomConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/adapters/DurationTypeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/adapters/LocalDateTimeTypeAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/http/HttpTaskServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/http/KVServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/http/KVTaskClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/serves/HttpTaskManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/149337848cb24c53468da7b5666026c55a0af40b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/1673c27b04f9774eff7a4c7cebc2b25cd1199df6" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/2787132d03baa1c6fc881a7e9e323e2e91d49d63" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a831b10439099d44774d0ccc387e808deffaeab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d2491ad83e3c25a380848692236609b528247c2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/7/b7b28fb37a5657b9f1a3b3bb3bdff47b0576455e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c9ad21ab2f414aec068b49c6b843d768e689ea77" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/5/45881575979d8c761fdbf6e006b7efd845ce8bb4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/6/4625597e5186a954028daadd37d3d6a5dbf995fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/7/474d3c9b5d780538e973b3340ea4e91e307286f7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4cc6358b03b0b28fb0fad70b3e447b9c71c62560" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51e3a9b7ac6c225ec83e8d13716325e0907984a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/6/8661f40c8815f0520d7d2d79144cb7ac5e71693e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/a/9ae8b78c78dd18066b6b3ef1b95def4d92a03040" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/b/9bda5e54c6991ef0c58ea8b80458f717ae44be33" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c54c364eed60505ed83e2a5015005374628101fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/9/d9197eabbb19fdb4548801f5eb4a0ae7bef39195" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Module/EpicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Module/EpicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Serves/FileBackedTasksManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Serves/FileBackedTasksManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Serves/InMemoryHistoryManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Serves/InMemoryHistoryManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Serves/InMemoryTaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Serves/InMemoryTaskManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Serves/TaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/java-sprint6-hw/company/Serves/TaskManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/company/Module/EpicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/module/EpicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/company/Serves/FileBackedTasksManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/serves/FileBackedTasksManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/company/Serves/InMemoryHistoryManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/serves/InMemoryHistoryManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/company/Serves/InMemoryTaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/serves/InMemoryTaskManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test/company/Serves/TaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/serves/TaskManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/out.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/out.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Module/EpicTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Module/EpicTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Serves/FileBackedTasksManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Serves/FileBackedTasksManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Serves/InMemoryHistoryManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Serves/InMemoryHistoryManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Serves/InMemoryTaskManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Serves/InMemoryTaskManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Serves/TaskManagerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/Test/company/Serves/TaskManagerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/module/Epic.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/module/Epic.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/serves/FileBackedTasksManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/serves/FileBackedTasksManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/serves/InMemoryTaskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/serves/InMemoryTaskManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/serves/Managers.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/serves/Managers.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/serves/TaskManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/java-sprint7-hw/com/company/serves/TaskManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/company/serves/FileBackedTasksManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/serves/FileBackedTasksManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test/company/serves/TaskManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test/company/serves/TaskManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/module/Epic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/module/Epic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/serves/FileBackedTasksManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/serves/FileBackedTasksManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/serves/InMemoryTaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/serves/InMemoryTaskManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/serves/Managers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/serves/Managers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/taskData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/taskData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/serves/TaskManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/serves/TaskManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,7 +66,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2LStGyGahIhFnrjInq84AxwZK9O" />
+  <component name="ProjectId" id="2MIfcFyYkQrCYceOwZ7QiY5aMTP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,93 +74,86 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Backup/java-sprint7-hw&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Final\java-sprint7-hw\src\com\company" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
       <recent name="test.company.serves" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.company.http" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.InMemoryTaskManagerTest">
-    <configuration name="EpicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="HttpTaskServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.http.HttpTaskServer" />
       <module name="java-sprint7-hw" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.company.module.*" />
+          <option name="PATTERN" value="com.company.http.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Test.company.Module" />
-      <option name="MAIN_CLASS_NAME" value="Test.company.module.EpicTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileBackedTasksManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="KVServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.http.KVServer" />
       <module name="java-sprint7-hw" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.company.serves.*" />
+          <option name="PATTERN" value="com.company.http.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Test.company.Serves" />
-      <option name="MAIN_CLASS_NAME" value="Test.company.serves.FileBackedTasksManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryTaskManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="java-sprint7-hw" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.company.serves.*" />
+          <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Test.company.Serves" />
-      <option name="MAIN_CLASS_NAME" value="Test.company.serves.InMemoryTaskManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InMemoryTaskManagerTest.updateEpicStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-sprint7-hw" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.company.serves.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Test.company.Serves" />
-      <option name="MAIN_CLASS_NAME" value="Test.company.serves.InMemoryTaskManagerTest" />
-      <option name="METHOD_NAME" value="updateEpicStatus" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.InMemoryTaskManagerTest" />
-        <item itemvalue="JUnit.FileBackedTasksManagerTest" />
-        <item itemvalue="JUnit.InMemoryTaskManagerTest.updateEpicStatus" />
-        <item itemvalue="JUnit.EpicTest" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.HttpTaskServer" />
+        <item itemvalue="Application.KVServer" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="01e71018-181e-4988-bfb6-47260a80026e" name="Changes" comment="" />
-      <created>1675876222116</created>
+      <changelist id="f8f48a60-b046-41fb-8894-b86cf7d8de07" name="Changes" comment="" />
+      <created>1677460094669</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1675876222116</updated>
+      <updated>1677460094669</updated>
     </task>
     <servers />
   </component>
@@ -149,11 +172,47 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/company/serves/FileBackedTasksManagerTest.java</url>
-          <line>17</line>
+          <url>file://$PROJECT_DIR$/src/com/company/http/HttpTaskServer.java</url>
+          <line>41</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/http/KVServer.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/company/http/HttpTaskServer.java</url>
+          <line>214</line>
+          <properties class="com.company.http.HttpTaskServer" method="handleEpic">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.net.http.HttpHeaders" memberName="headers" />
+        <PinnedItemInfo parentTag="jdk.internal.net.http.HttpResponseImpl" memberName="body" />
+        <PinnedItemInfo parentTag="java.lang.String" memberName="coder" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

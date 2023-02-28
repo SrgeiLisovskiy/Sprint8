@@ -17,12 +17,12 @@ import java.util.List;
 
 public class FileBackedTasksManager extends InMemoryTaskManager implements TaskManager {
 
-    static Path path = Path.of("taskData.csv");
-    static private File file = new File(String.valueOf(path));
+    static String path = "taskData.csv";
+    static private File file ;
     private static final String HEAD = "id,type,name,status,description,startTime,duration,endTime,epic";
 
     public static void main(String[] args) throws IOException {
-        FileBackedTasksManager manager = new FileBackedTasksManager(file);
+        FileBackedTasksManager manager = new FileBackedTasksManager(path);
         FileBackedTasksManager manager1;
         Task task1 = new Task("Задача 1", "Помыть посуду", Status.NEW,Duration.ofMinutes(30),LocalDateTime.now());
         int taskID1 = manager.addTask(task1);
@@ -49,12 +49,12 @@ public class FileBackedTasksManager extends InMemoryTaskManager implements TaskM
 
     }
 
-    public FileBackedTasksManager(File file) {
-        this.file = file;
+    public FileBackedTasksManager(String path) {
+        this.file =  new File(String.valueOf(path)) ;
     }
 
     public static FileBackedTasksManager loadFromFile(File file) {
-        FileBackedTasksManager file1 = new FileBackedTasksManager(file);
+        FileBackedTasksManager file1 = new FileBackedTasksManager(path);
         List<String> allLine = new ArrayList<>();
         if (file.exists()) {
             try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8))) {

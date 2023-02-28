@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Path;
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -20,14 +21,14 @@ class FileBackedTasksManagerTest extends TaskManagerTest<FileBackedTasksManager>
     FileBackedTasksManager manager1;
 
 
-    Path path;
+    String path;
     File file;
 
     @BeforeEach
-    public void beforeEach() {
-        path = Path.of("taskData.csv");
-        file = new File(String.valueOf(path));
-        manager = new FileBackedTasksManager(file);
+    public void beforeEach() throws IOException {
+        path = "taskData.csv";
+
+        manager = new FileBackedTasksManager(path);
 
 
     }

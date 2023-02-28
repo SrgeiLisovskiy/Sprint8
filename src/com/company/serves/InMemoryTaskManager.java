@@ -5,10 +5,7 @@ import com.company.module.Status;
 import com.company.module.Subtask;
 import com.company.module.Task;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.TreeSet;
+import java.util.*;
 
 
 public class InMemoryTaskManager implements TaskManager {
@@ -57,7 +54,7 @@ public class InMemoryTaskManager implements TaskManager {
         subtask.setId(id++);
         collectionSubtask.put(subtask.getId(), subtask);
         Epic epics = collectionEpic.get(subtask.getEpicID());
-        List<Integer> subtaskID = epics.getSubtasks();
+        List<Integer> subtaskID = epics.getSubtasksID();
         subtaskID.add(subtask.getId());
         updateEpicStatus(epics);
         updateSortedTaskSet();
@@ -79,7 +76,11 @@ public class InMemoryTaskManager implements TaskManager {
 
     @Override
     public List<Epic> getEpics() {                          //Вывод списка Epic
-        List<Epic> epics = new ArrayList<>(collectionEpic.values());
+        List<Epic> epics = new ArrayList<>();
+        for (int i: collectionEpic.keySet()){
+           Epic epic = collectionEpic.get(i);
+           epics.add(epic);
+        }
         return epics;
     }
 
@@ -100,7 +101,7 @@ public class InMemoryTaskManager implements TaskManager {
         collectionSubtask.clear();
         for (int i : collectionEpic.keySet()) {
             Epic epic = collectionEpic.get(i);
-            List<Integer> subtasksID = epic.getSubtasks();
+            List<Integer> subtasksID = epic.getSubtasksID();
             subtasksID.clear();
             epic.setSubtasksID(subtasksID);
             updateEpicStatus(epic);
@@ -160,7 +161,7 @@ public class InMemoryTaskManager implements TaskManager {
     @Override
     public void removeEpicID(int id) {
         if (collectionEpic.get(id) != null) {
-            List<Integer> subtasksID = collectionEpic.get(id).getSubtasks();
+            List<Integer> subtasksID = collectionEpic.get(id).getSubtasksID();
             for (int i : subtasksID) {
                 collectionSubtask.remove(i);
                 historyManager.remove(i);
@@ -177,7 +178,7 @@ public class InMemoryTaskManager implements TaskManager {
         if (collectionSubtask.get(id) != null) {
             int j = collectionSubtask.get(id).getEpicID();
             Epic epic = collectionEpic.get(j);
-            List<Integer> subtasksID = epic.getSubtasks();
+            List<Integer> subtasksID = epic.getSubtasksID();
             subtasksID.remove((Object) id);
             epic.setSubtasksID(subtasksID);
             collectionSubtask.remove(id);
@@ -206,7 +207,7 @@ public class InMemoryTaskManager implements TaskManager {
     @Override
     public void updateEpic(Epic epic) {
         if (collectionEpic.get(epic.getId()) != null) {
-            epic.setSubtasksID(collectionEpic.get(epic.getId()).getSubtasks());
+            epic.setSubtasksID(collectionEpic.get(epic.getId()).getSubtasksID());
             collectionEpic.put(epic.getId(), epic);
         } else {
             System.out.println("Epic не найден!");
@@ -234,7 +235,7 @@ public class InMemoryTaskManager implements TaskManager {
         boolean hasNew = false;
         boolean hasInProgress = false;
         boolean hasDone = false;
-        for (int k : epic.getSubtasks()) {
+        for (int k : epic.getSubtasksID()) {
             Subtask subtask = collectionSubtask.get(k);
             if (subtask.getStatus() == Status.NEW) {
                 hasNew = true;
@@ -246,7 +247,7 @@ public class InMemoryTaskManager implements TaskManager {
             }
 
         }
-        if (hasNew && !hasInProgress && !hasDone || epic.getSubtasks().size() == 0) {
+        if (hasNew && !hasInProgress && !hasDone || epic.getSubtasksID().size() == 0) {
             epic.setStatus(Status.NEW);
         } else if (!hasNew && !hasInProgress && hasDone) {
             epic.setStatus(Status.DONE);
@@ -276,9 +277,24 @@ public class InMemoryTaskManager implements TaskManager {
         this.id = id;
     }
     @Override
-    public TreeSet<Task> getSortedTaskSet() {
+    public TreeSet<Task> getPrioritizedTasks() {
         return sortedTaskSet;
     }
+
+    @Override
+    public List<Subtask> getEpicSubtask(int id) {
+        if (collectionEpic.containsKey(id)) {
+            List<Subtask> subtasksIDNew = new ArrayList<>();
+            Epic epic = collectionEpic.get(id);
+            for (int i = 0; i < epic.getSubtasksID().size(); i++) {
+                subtasksIDNew.add(collectionSubtask.get(epic.getSubtasksID().get(i)));
+            }
+            return subtasksIDNew;
+        } else {
+            return Collections.emptyList();
+        }
+    }
+
     public TreeSet<Task> updateSortedTaskSet(){
         sortedTaskSet.clear();
        sortedTaskSet.addAll(getTasks());
